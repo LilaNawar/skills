@@ -1,0 +1,21 @@
+<h1> Skills Page </h1>
+
+<a href = "/skills/new"> Add Skill</a>
+<table>
+    <tr>
+        <th> Skill</th>
+        <th> Years of Knowledge</th>
+        <th> Delete </th>
+    </tr>
+
+  <% data.forEach(function(data, index) { %>
+
+    <tr>
+        <td> <%= data.skill %> </td>
+        <td> <%= data.years %> </td>
+        <td> <a href="/skills/delete?id=<%= index %>"> Delete </a></td>
+    </tr>
+    
+  <% }) %>
+
+</table>
